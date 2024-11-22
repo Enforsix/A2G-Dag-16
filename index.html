@@ -4,20 +4,163 @@
     <title>Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
   <body>
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
     </nav>
-    <main>
-      <h1>Home page</h1>
+    <main class="container">
+      <h1>HTML Form</h1>
+      <fieldset>
+        <legend>Personalia</legend>
+
+      <form action="/submit" method="POST">
+      <div class="form-group">
+        <label for="name">Navn</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Skiv navent ditt her." 
+          required 
+        /> 
+      </div>
+
+      <div class="form-group">
+        <form action="/submit" method="POST">
+          <label for="surename">Etternavn</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="etternavn" 
+            placeholder="Skiv etternavnet ditt her." 
+            />
+      </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="eksempel@gmail.com"/>
+        </div>
+      </fieldset> 
+
+      <fieldset>
+        <legend>Classes</legend>
+        <input 
+        type="checkbox"
+        name="class"
+        value="Warrior" />
+        Warrior
+        
+        <input type="checkbox"/>Mage</label>
+        <input type="checkbox"/>Ranger</label>
+        <input type="checkbox"/>Prist</label>
+        <input type="checkbox"/>Assasin</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Equipment</legend>
+          <label>
+            <input 
+              type="checkbox" 
+              name="Equipment"
+              value="Sword" />
+            Sword
+          </label>
+
+          <label>
+            <input 
+              type="checkbox" 
+              name="Hobby"
+              value="Boots" />
+            Boots
+          </label>
+
+          <label>
+            <input 
+              type="checkbox" 
+              name="Hobby"
+              value="Havey Armor" />
+              Havey Armor
+          </label>
+
+          <label>
+            <input 
+              type="checkbox" 
+              name="Hobby"
+              value="Medium Armor" />
+              Medium Armor
+          </label>
+
+          <label>
+            <input 
+              type="checkbox" 
+              name="Hobby"
+              value="Light Armor" />
+              Light Armor
+          </label>
+
+          <label>
+            <input 
+              type="checkbox" 
+              name="Hobby"
+              value="Bow" />
+              Bow
+          </label>
+
+          <label>
+            <input 
+              type="checkbox" 
+              name="Hobby"
+              value="Dagger" />
+              Dagger
+          </label>
+
+          <label>
+            <input 
+              type="checkbox" 
+              name="Hobby"
+              value="Wand" />
+              Wand
+          </label>
+
+          <label>
+            <input 
+              type="checkbox" 
+              name="Hobby"
+              value="Potion" />
+              Potion
+          </label>
+
+          <label>
+            <input 
+              type="checkbox" 
+              name="Hobby"
+              value="Ring" />
+              Ring
+          </label>
+
+      </fieldset>
+      <div class="form-group">
+        <label for="country">Land: </label>
+        <select name="country" id="country">
+          <option value="">Velg ditt Land</option>
+          <option value="norway">Norge</option>
+          <option value="denmakr">Danmark</option>
+          <option value="sweden">Sverie</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="picture">Last opp bilde</label>
+        <input type="file" id="picture" name="picture" accept="image/*"/>        
+      </div>
+      <br />
+      <button id="submit-btn">Send Inn</button>
+      </form>
     </main>
   </body>
 </html>
